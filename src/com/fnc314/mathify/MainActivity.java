@@ -42,13 +42,19 @@ public class MainActivity extends ActionBarActivity {
 		Integer sum=num1+num2;
 		Integer diff=Math.abs(num1-num2);
 		Integer prod=num1 * num2;
+		Double quot1= num1.doubleValue() / num2.doubleValue();
+		Double quot2= num2.doubleValue() / num1.doubleValue();
 		
 		TextView addition=(TextView)findViewById(R.id.sum);
 		addition.setText("Sum: " + sum.toString());
 		TextView difference=(TextView)findViewById(R.id.diff);
-		difference.setText("Difference: " +diff.toString());
+		difference.setText("Difference: " + diff.toString());
 		TextView product=(TextView)findViewById(R.id.prod);
-		product.setText("Product: " +prod.toString());
+		product.setText("Product: " + prod.toString());
+		TextView quotient1=(TextView)findViewById(R.id.quot1);
+		quotient1.setText("Quotient 1 (num1/num2): "+quot1);
+		TextView quotient2=(TextView)findViewById(R.id.quot2);
+		quotient2.setText("Quotient 2 (num2/num1): "+quot2);
 		
 	}
 
