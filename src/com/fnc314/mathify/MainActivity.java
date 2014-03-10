@@ -22,7 +22,7 @@ public class MainActivity extends ActionBarActivity {
 
 		if (savedInstanceState == null) {
 			getSupportFragmentManager().beginTransaction()
-					.add(R.id.container, new PlaceholderFragment()).commit();
+					.add(R.id.main_view, new PlaceholderFragment()).commit();
 		}
 	}
 
@@ -38,11 +38,11 @@ public class MainActivity extends ActionBarActivity {
 	public void mathify(View view) {
 		EditText num1text=(EditText)findViewById(R.id.num1);
 		EditText num2text=(EditText)findViewById(R.id.num2);
-		Integer num1=Integer.parseInt(num1text.toString()),num2=Integer.parseInt(num2text.toString());
+		Integer num1=Integer.parseInt(num1text.getText().toString()),num2=Integer.parseInt(num2text.getText().toString());
 		Integer sum=num1+num2;
 		
 		TextView addition=(TextView)findViewById(R.id.sum);
-		addition.setText("Sum: "+sum.toString());
+		addition.setText("Sum: " + sum.toString());
 		
 	}
 
