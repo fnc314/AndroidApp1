@@ -52,7 +52,7 @@ public class MainActivity extends ActionBarActivity {
 		TextView difference=(TextView)findViewById(R.id.diff);
 		difference.setText("Difference (|"+num1+" - "+num2+"|): " + diff);
 		TextView product=(TextView)findViewById(R.id.prod);
-		product.setText("Product ("+num1+" x "+num2+": " + prod);
+		product.setText("Product ("+num1+" x "+num2+"): " + prod);
 		TextView quotient1=(TextView)findViewById(R.id.quot1);
 		quotient1.setText("Quotient 1 ("+num1+"/"+num2+"): "+quot1);
 		TextView quotient2=(TextView)findViewById(R.id.quot2);
