@@ -6,5 +6,13 @@
     <string name="action_settings">Settings</string>
     <string name="num1">Number 1 (num1)</string>
     <string name="num2">Number 2 (num2)</string>
+    <string name="mathify">Mathify!</string>
+    <string name="sum">Sum:</string>
+    <string name="diff">Difference:</string>
+    <string name="prod">Product:</string>
+    <string name="quot1">Quotient 1 (num1 / num2):</string>
+    <string name="quot2">Quotient 2 (num2 / num1):</string>
+    <string name="mod1">Mod 1 (num1 mod num2):</string>
+    <string name="mod2">Mod 2 (num2 mod num1):</string>
 
 </resources>

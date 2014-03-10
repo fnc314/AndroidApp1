@@ -4,4 +4,77 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.fnc314.mathify.MainActivity"
-    tools:ignore="MergeRootFrame" />
+    tools:ignore="MergeRootFrame" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/num1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:text="@string/num1" />
+
+        <EditText
+            android:id="@+id/num2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:text="@string/num2" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/mathify" />
+
+        <TextView
+            android:id="@+id/sum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sum" />
+
+        <TextView
+            android:id="@+id/diff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/diff" />
+
+        <TextView
+            android:id="@+id/prod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/prod" />
+
+        <TextView
+            android:id="@+id/quot1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/quot1" />
+
+        <TextView
+            android:id="@+id/quot2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/quot2" />
+
+        <TextView
+            android:id="@+id/mod1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mod1" />
+
+        <TextView
+            android:id="@+id/mod2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mod2" />
+
+    </LinearLayout>
+
+</FrameLayout>
