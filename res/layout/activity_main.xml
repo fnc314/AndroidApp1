@@ -47,6 +47,12 @@
             android:layout_height="wrap_content"
             android:text="@string/diff" />
 
+        <TextView
+            android:id="@+id/prod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/prod" />
+
     </LinearLayout>
 
 </FrameLayout>
