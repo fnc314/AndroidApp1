@@ -48,15 +48,15 @@ public class MainActivity extends ActionBarActivity {
 		Integer mod2 = num2 % num1;
 		
 		TextView addition=(TextView)findViewById(R.id.sum);
-		addition.setText("Sum: " + sum.toString());
+		addition.setText("Sum: " + sum);
 		TextView difference=(TextView)findViewById(R.id.diff);
-		difference.setText("Difference: " + diff.toString());
+		difference.setText("Difference: " + diff);
 		TextView product=(TextView)findViewById(R.id.prod);
-		product.setText("Product: " + prod.toString());
+		product.setText("Product: " + prod);
 		TextView quotient1=(TextView)findViewById(R.id.quot1);
-		quotient1.setText("Quotient 1 (num1/num2): "+quot1);
+		quotient1.setText("Quotient 1 ("+num1+"/"+num2+"): "+quot1);
 		TextView quotient2=(TextView)findViewById(R.id.quot2);
-		quotient2.setText("Quotient 2 (num2/num1): "+quot2);
+		quotient2.setText("Quotient 2 ("+num2+"/"+num1+"): "+quot2);
 		TextView modular1=(TextView)findViewById(R.id.mod1);
 		modular1.setText("Mod 1 ("+num1+" mod "+num2+"): "+mod1);
 		TextView modular2=(TextView)findViewById(R.id.mod2);
