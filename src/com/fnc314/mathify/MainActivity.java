@@ -50,7 +50,7 @@ public class MainActivity extends ActionBarActivity {
 		TextView addition=(TextView)findViewById(R.id.sum);
 		addition.setText("Sum: " + sum);
 		TextView difference=(TextView)findViewById(R.id.diff);
-		difference.setText("Difference: " + diff);
+		difference.setText("Difference (|"+num1+"-"+num2+"|): " + diff);
 		TextView product=(TextView)findViewById(R.id.prod);
 		product.setText("Product: " + prod);
 		TextView quotient1=(TextView)findViewById(R.id.quot1);
