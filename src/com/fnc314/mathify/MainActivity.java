@@ -9,6 +9,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.os.Build;
 
 public class MainActivity extends ActionBarActivity {
@@ -20,7 +22,7 @@ public class MainActivity extends ActionBarActivity {
 
 		if (savedInstanceState == null) {
 			getSupportFragmentManager().beginTransaction()
-					.add(R.id.container, new PlaceholderFragment()).commit();
+					.add(R.id.main_view, new PlaceholderFragment()).commit();
 		}
 	}
 
@@ -30,6 +32,18 @@ public class MainActivity extends ActionBarActivity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
+	}
+	
+	
+	public void mathify(View view) {
+		EditText num1text=(EditText)findViewById(R.id.num1);
+		EditText num2text=(EditText)findViewById(R.id.num2);
+		Integer num1=Integer.parseInt(num1text.getText().toString()),num2=Integer.parseInt(num2text.getText().toString());
+		Integer sum=num1+num2;
+		
+		TextView addition=(TextView)findViewById(R.id.sum);
+		addition.setText("Sum: " + sum.toString());
+		
 	}
 
 	@Override
