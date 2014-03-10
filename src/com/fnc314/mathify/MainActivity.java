@@ -44,6 +44,8 @@ public class MainActivity extends ActionBarActivity {
 		Integer prod=num1 * num2;
 		Double quot1= num1.doubleValue() / num2.doubleValue();
 		Double quot2= num2.doubleValue() / num1.doubleValue();
+		Integer mod1 = num1 % num2;
+		Integer mod2 = num2 % num1;
 		
 		TextView addition=(TextView)findViewById(R.id.sum);
 		addition.setText("Sum: " + sum.toString());
@@ -55,6 +57,10 @@ public class MainActivity extends ActionBarActivity {
 		quotient1.setText("Quotient 1 (num1/num2): "+quot1);
 		TextView quotient2=(TextView)findViewById(R.id.quot2);
 		quotient2.setText("Quotient 2 (num2/num1): "+quot2);
+		TextView modular1=(TextView)findViewById(R.id.mod1);
+		modular1.setText("Mod 1 ("+num1+" mod "+num2+"): "+mod1);
+		TextView modular2=(TextView)findViewById(R.id.mod2);
+		modular2.setText("Mod 2 ("+num2+" mod "+num1+"): "+mod2);
 		
 	}
 
