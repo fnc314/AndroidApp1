@@ -40,9 +40,12 @@ public class MainActivity extends ActionBarActivity {
 		EditText num2text=(EditText)findViewById(R.id.num2);
 		Integer num1=Integer.parseInt(num1text.getText().toString()),num2=Integer.parseInt(num2text.getText().toString());
 		Integer sum=num1+num2;
+		Integer diff=Math.abs(num1-num2);
 		
 		TextView addition=(TextView)findViewById(R.id.sum);
 		addition.setText("Sum: " + sum.toString());
+		TextView difference=(TextView)findViewById(R.id.diff);
+		difference.setText("Difference: " +diff.toString());
 		
 	}
 
