@@ -36,32 +36,46 @@ public class MainActivity extends ActionBarActivity {
 	
 	
 	public void mathify(View view) {
+//		Find and extract user inputs
 		EditText num1text=(EditText)findViewById(R.id.num1);
 		EditText num2text=(EditText)findViewById(R.id.num2);
-		Integer num1=Integer.parseInt(num1text.getText().toString()),num2=Integer.parseInt(num2text.getText().toString());
-		Integer sum=num1+num2;
-		Integer diff=Math.abs(num1-num2);
-		Integer prod=num1 * num2;
-		Double quot1= num1.doubleValue() / num2.doubleValue();
-		Double quot2= num2.doubleValue() / num1.doubleValue();
-		Integer mod1 = num1 % num2;
-		Integer mod2 = num2 % num1;
+//		Convert user input to integers for arithmetic manipulation
+		Integer num1=Integer.parseInt(num1text.getText().toString());
+		Integer num2=Integer.parseInt(num2text.getText().toString());
 		
-		TextView addition=(TextView)findViewById(R.id.sum);
-		addition.setText("Sum: " + sum.toString());
+		addInputs(num1, num2);
+//		Calculate sum and create display text (needs to be refactored into separate function)
+		//Calculate difference and create display text (needs to be refactored into separate function)
+		Integer diff=Math.abs(num1-num2);
 		TextView difference=(TextView)findViewById(R.id.diff);
-		difference.setText("Difference: " + diff.toString());
+		difference.setText("Difference (|"+num1+" - "+num2+"|): " + diff);
+//		Calculate product and create display text (needs to be refactored into separate function)
+		Integer prod=num1 * num2;
 		TextView product=(TextView)findViewById(R.id.prod);
-		product.setText("Product: " + prod.toString());
+		product.setText("Product ("+num1+" x "+num2+"): " + prod);
+//		Calculate quotient (quot1) and generate display text (needs to be refactored into separate function)
+		Double quot1= num1.doubleValue() / num2.doubleValue();
 		TextView quotient1=(TextView)findViewById(R.id.quot1);
-		quotient1.setText("Quotient 1 (num1/num2): "+quot1);
+		quotient1.setText("Quotient 1 ("+num1+"/"+num2+"): "+quot1);
+//		Calculate quotient (quot2) and generate display text (needs to be refactored into separate function)		
+		Double quot2= num2.doubleValue() / num1.doubleValue();
 		TextView quotient2=(TextView)findViewById(R.id.quot2);
-		quotient2.setText("Quotient 2 (num2/num1): "+quot2);
+		quotient2.setText("Quotient 2 ("+num2+"/"+num1+"): "+quot2);
+//		Calculate modulus (mod1) and generate display text (needs to be refactored into separate function)
+		Integer mod1 = num1 % num2;
 		TextView modular1=(TextView)findViewById(R.id.mod1);
 		modular1.setText("Mod 1 ("+num1+" mod "+num2+"): "+mod1);
+//		Calculate modulus (mod2) and generate display text (needs to be refactored into separate function)
+		Integer mod2 = num2 % num1;
 		TextView modular2=(TextView)findViewById(R.id.mod2);
 		modular2.setText("Mod 2 ("+num2+" mod "+num1+"): "+mod2);
 		
+	}
+	
+	public void addInputs(Integer num1, Integer num2) {
+		Integer sum=num1+num2;
+		TextView addition=(TextView)findViewById(R.id.sum);
+		addition.setText("Sum ("+num1+" + "+num2+"): " + sum);
 	}
 
 	@Override
