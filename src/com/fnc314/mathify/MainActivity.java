@@ -40,12 +40,12 @@ public class MainActivity extends ActionBarActivity {
 		EditText num1text=(EditText)findViewById(R.id.num1);
 		EditText num2text=(EditText)findViewById(R.id.num2);
 //		Convert user input to integers for arithmetic manipulation
-		Integer num1=Integer.parseInt(num1text.getText().toString()),num2=Integer.parseInt(num2text.getText().toString());
+		Integer num1=Integer.parseInt(num1text.getText().toString());
+		Integer num2=Integer.parseInt(num2text.getText().toString());
+		
+		addInputs(num1, num2);
 //		Calculate sum and create display text (needs to be refactored into separate function)
-		Integer sum=num1+num2;
-		TextView addition=(TextView)findViewById(R.id.sum);
-		addition.setText("Sum ("+num1+" + "+num2+"): " + sum);
-//		Calculate difference and create display text (needs to be refactored into separate function)
+		//Calculate difference and create display text (needs to be refactored into separate function)
 		Integer diff=Math.abs(num1-num2);
 		TextView difference=(TextView)findViewById(R.id.diff);
 		difference.setText("Difference (|"+num1+" - "+num2+"|): " + diff);
@@ -70,6 +70,12 @@ public class MainActivity extends ActionBarActivity {
 		TextView modular2=(TextView)findViewById(R.id.mod2);
 		modular2.setText("Mod 2 ("+num2+" mod "+num1+"): "+mod2);
 		
+	}
+	
+	public void addInputs(Integer num1, Integer num2) {
+		Integer sum=num1+num2;
+		TextView addition=(TextView)findViewById(R.id.sum);
+		addition.setText("Sum ("+num1+" + "+num2+"): " + sum);
 	}
 
 	@Override
