@@ -46,9 +46,7 @@ public class MainActivity extends ActionBarActivity {
 		addInputs(num1, num2);
 //		Calculate sum and create display text (needs to be refactored into separate function)
 		//Calculate difference and create display text (needs to be refactored into separate function)
-		Integer diff=Math.abs(num1-num2);
-		TextView difference=(TextView)findViewById(R.id.diff);
-		difference.setText("Difference (|"+num1+" - "+num2+"|): " + diff);
+		differenceInputs(num1, num2);
 //		Calculate product and create display text (needs to be refactored into separate function)
 		Integer prod=num1 * num2;
 		TextView product=(TextView)findViewById(R.id.prod);
@@ -76,6 +74,12 @@ public class MainActivity extends ActionBarActivity {
 		Integer sum=num1+num2;
 		TextView addition=(TextView)findViewById(R.id.sum);
 		addition.setText("Sum ("+num1+" + "+num2+"): " + sum);
+	}
+	
+	public void differenceInputs(Integer num1, Integer num2) {
+		Integer diff=Math.abs(num1-num2);
+		TextView difference=(TextView)findViewById(R.id.diff);
+		difference.setText("Difference (|"+num1+" - "+num2+"|): " + diff);
 	}
 
 	@Override
