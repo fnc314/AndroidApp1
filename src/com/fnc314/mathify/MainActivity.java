@@ -44,13 +44,10 @@ public class MainActivity extends ActionBarActivity {
 		Integer num2=Integer.parseInt(num2text.getText().toString());
 		
 		addInputs(num1, num2);
-//		Calculate sum and create display text (needs to be refactored into separate function)
-		//Calculate difference and create display text (needs to be refactored into separate function)
+
 		differenceInputs(num1, num2);
-//		Calculate product and create display text (needs to be refactored into separate function)
-		Integer prod=num1 * num2;
-		TextView product=(TextView)findViewById(R.id.prod);
-		product.setText("Product ("+num1+" x "+num2+"): " + prod);
+
+		multiplyInputs(num1, num2);
 //		Calculate quotient (quot1) and generate display text (needs to be refactored into separate function)
 		Double quot1= num1.doubleValue() / num2.doubleValue();
 		TextView quotient1=(TextView)findViewById(R.id.quot1);
@@ -80,6 +77,12 @@ public class MainActivity extends ActionBarActivity {
 		Integer diff=Math.abs(num1-num2);
 		TextView difference=(TextView)findViewById(R.id.diff);
 		difference.setText("Difference (|"+num1+" - "+num2+"|): " + diff);
+	}
+	
+	public void multiplyInputs(Integer num1, Integer num2) {
+		Integer prod=num1 * num2;
+		TextView product=(TextView)findViewById(R.id.prod);
+		product.setText("Product ("+num1+" x "+num2+"): " + prod);
 	}
 
 	@Override
