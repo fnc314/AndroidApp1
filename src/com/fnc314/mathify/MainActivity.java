@@ -50,14 +50,8 @@ public class MainActivity extends ActionBarActivity {
 		multiplyInputs(num1, num2);
 		
 		quotientInputs(num1, num2);
-		Integer mod1 = num1 % num2;
-		TextView modular1=(TextView)findViewById(R.id.mod1);
-		modular1.setText("Mod 1 ("+num1+" mod "+num2+"): "+mod1);
-//		Calculate modulus (mod2) and generate display text (needs to be refactored into separate function)
-		Integer mod2 = num2 % num1;
-		TextView modular2=(TextView)findViewById(R.id.mod2);
-		modular2.setText("Mod 2 ("+num2+" mod "+num1+"): "+mod2);
-		
+
+		moduloInputs(num1, num2);
 	}
 	
 	public void addInputs(Integer num1, Integer num2) {
@@ -86,6 +80,16 @@ public class MainActivity extends ActionBarActivity {
 		Double quot2= num2.doubleValue() / num1.doubleValue();
 		TextView quotient2=(TextView)findViewById(R.id.quot2);
 		quotient2.setText("Quotient 2 ("+num2+"/"+num1+"): "+quot2);
+	}
+	
+	public void moduloInputs(Integer num1, Integer num2) {
+		Integer mod1 = num1 % num2;
+		TextView modular1=(TextView)findViewById(R.id.mod1);
+		modular1.setText("Mod 1 ("+num1+" mod "+num2+"): "+mod1);
+
+		Integer mod2 = num2 % num1;
+		TextView modular2=(TextView)findViewById(R.id.mod2);
+		modular2.setText("Mod 2 ("+num2+" mod "+num1+"): "+mod2);
 	}
 
 	@Override
